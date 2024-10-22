@@ -4,7 +4,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #7592bd ;
-user-select: none;
+    user-select: none;
 }
 
 .container{
@@ -27,7 +27,7 @@ h2{
     font-size: 3em;
     color:#fff;
     text-transform: uppercase;
-    letter-spacing: 0.1e;
+    letter-spacing: 0.1em;
 
 }
 .reset{
@@ -45,7 +45,7 @@ h2{
 
 .reset:focus{
     color:#38ec6e;
-    background-color: #262809;
+    background-color: #000;
 }
 
 .game{
@@ -53,6 +53,7 @@ h2{
     height: 430px;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     border: 1px solid red;
     transform-style: preserve-3d;
     perspective: 500px;
@@ -78,7 +79,17 @@ h2{
     position: absolute;
     inset: 0;
     background: #404040;
-    transition: 0.25;
-    transform: rotateY(180deg);
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
     
+    
+}
+
+.item.caixaAberta{
+    transform: rotateY(0deg);
+
+}
+.caixaAberta::after{
+    transform: rotateY(180deg);
 }
