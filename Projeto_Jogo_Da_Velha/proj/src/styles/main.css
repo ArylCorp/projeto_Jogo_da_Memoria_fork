@@ -54,7 +54,6 @@ h2{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    border: 1px solid red;
     transform-style: preserve-3d;
     perspective: 500px;
 

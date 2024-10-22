@@ -35,11 +35,15 @@ function handleClick(){
 
 function checaCartas(){
     if(cartaAberta[0].innerHTML === cartaAberta[1].innerHTML){
-        cartaAberta[0].classList.add("boxMatch")
-        cartaAberta[1].classList.add("boxMatch")
+        cartaAberta[0].classList.add("caixaBate")
+        cartaAberta[1].classList.add("caixaBate")
     } else{
         cartaAberta[0].classList.remove("caixaAberta")
         cartaAberta[1].classList.remove("caixaAberta")
     }
     cartaAberta = []
+    if(document.querySelectorAll(".caixaBate").length === emojis.length){
+        alert("Você Venceu" + "😁")
+
+    }
 }
